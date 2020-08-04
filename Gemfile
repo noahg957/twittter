@@ -6,7 +6,7 @@ ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # Use sqlite3 as the database for Active Record
-
+gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -57,7 +57,6 @@ group :development do
   gem 'better_errors', '~> 2.7', '>= 2.7.1'
   gem 'guard', '~> 2.16', '>= 2.16.2'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
-  gem 'sqlite3'
 end
 
 group :test do
@@ -68,8 +67,8 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :production do 
-  gem 'pg'         #gem to use in production environment
+group :production do
+  gem 'pg',             '0.17.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
