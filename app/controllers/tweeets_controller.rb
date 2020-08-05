@@ -7,6 +7,9 @@ class TweeetsController < ApplicationController
   def index
     @tweeets = Tweeet.all.order("created_at DESC")
     @tweeet = Tweeet.new
+    @users = User.joins(:tweeets).group("users.id").order("count(users.id) DESC")
+
+
   end
 
   # GET /tweeets/1

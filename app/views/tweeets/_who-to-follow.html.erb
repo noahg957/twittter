@@ -6,14 +6,14 @@
 		<article class="media">
 			<div class="media-left">
 				<figure class="image is-32x32">
-					<img src="https://bulma.io/images/placeholders/64x64.png">
+					<%= gravatar_image_tag(@users.first.email, size: 64, alt: @users.first.name) %>
 				</figure>
 			</div>
 			<div class="media-content">
 				<div class="content">
 					<p>
-						<strong>John Smith</strong>
-						<small>@johnsmith</small>
+						<strong><%= link_to @users.first.name, user_path(@users.first.id)%></strong>
+						<small>@<%=@users.first.username%></small>
 					</p>
 				</div>
 			</div>
@@ -23,14 +23,14 @@
 		<article class="media">
 			<div class="media-left">
 				<figure class="image is-32x32">
-					<img src="https://bulma.io/images/placeholders/64x64.png">
+					<%= gravatar_image_tag(@users.second.email, size: 64, alt: @users.second.name) %>
 				</figure>
 			</div>
 			<div class="media-content">
 				<div class="content">
 					<p>
-						<strong>John Smith</strong>
-						<small>@johnsmith</small>
+						<strong><%= link_to @users.second.name, user_path(@users.second.id)%></strong>
+						<small>@<%=@users.second.username%></small>
 					</p>
 				</div>
 			</div>
@@ -40,14 +40,14 @@
 		<article class="media">
 			<div class="media-left">
 				<figure class="image is-32x32">
-					<img src="https://bulma.io/images/placeholders/64x64.png">
+					<%= gravatar_image_tag(@users.third.email, size: 64, alt: @users.third.name) %>
 				</figure>
 			</div>
 			<div class="media-content">
 				<div class="content">
 					<p>
-						<strong>John Smith</strong>
-						<small>@johnsmith</small>
+						<strong><%= link_to @users.third.name, user_path(@users.third.id)%></strong>
+						<small>@<%= @users.third.username%></small>
 					</p>
 				</div>
 			</div>
